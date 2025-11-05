@@ -42,10 +42,13 @@ if (index >= parts.length) return; String mnemonic = parts[index]; index++;
 if (instructions.contains(mnemonic)) {
 intermediateCode.add("(IS," + mnemonic + ") " + (index < parts.length ? parts[index] : ""));
 locCounter++;
-} else if (mnemonic.equals("DC")) { intermediateCode.add("(DL,DC) (C," + parts[index] + ")"); locCounter++;
-} else if (mnemonic.equals("DS")) { intermediateCode.add("(DL,DS) (C," + parts[index] + ")"); locCounter += Integer.parseInt(parts[index]);
+} else if (mnemonic.equals("DC")) { intermediateCode.add("(DL,DC) (C," + parts[index] + ")"); 
+                                   locCounter++;
+} else if (mnemonic.equals("DS")) { intermediateCode.add("(DL,DS) (C," + parts[index] + ")"); 
+                                   locCounter += Integer.parseInt(parts[index]);
 } else if (mnemonic.equals("END")) { intermediateCode.add("(AD,END)");
 }
 }
 }
+
 
