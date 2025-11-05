@@ -2,9 +2,11 @@ import java.util.*;
 public class pass1 {
 
 static int locCounter = 0;
-static Map<String, Integer> symbolTable = new HashMap<>(); static List<String> intermediateCode = new ArrayList<>();
+static Map<String, Integer> symbolTable = new HashMap<>(); 
+ static List<String> intermediateCode = new ArrayList<>();
 
-static Set<String> instructions = Set.of("ADD", "SUB", "MOV"); static Set<String> directives = Set.of("START", "END", "DC", "DS");
+static Set<String> instructions = Set.of("ADD", "SUB", "MOV"); 
+ static Set<String> directives = Set.of("START", "END", "DC", "DS");
 
 public static void main(String[] args) { String[] program = {
 "START 100", "LOOP ADD A", "SUB B",
@@ -46,3 +48,4 @@ locCounter++;
 }
 }
 }
+
