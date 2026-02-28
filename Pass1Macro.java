@@ -59,3 +59,4 @@ class Pass1Macro {
             System.out.println(i + ": " + MDT.get(i));
     }
 }
+
